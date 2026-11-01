@@ -1,0 +1,10 @@
+{
+  "name": "AgriVision",
+  "description": "AI-Powered Crop Disease Diagnostics for 18 staple and horticultural crops and 52 pathologies with multi-database benchmark grounding (PlantDoc, PlantVillage, ICAR, CABI, EPPO) and on-device offline inference.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

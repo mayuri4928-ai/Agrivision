@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        // Immediately unregister any stale Service Workers & Workbox caches that can block preview
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(regs) {
+            for (var i = 0; i < regs.length; i++) {
+              regs[i].unregister().catch(function() {});
+            }
+          }).catch(function() {});
+        }
+        if ('caches' in window) {
+          caches.keys().then(function(keys) {
+            for (var j = 0; j < keys.length; j++) {
+              if (keys[j].indexOf('workbox') !== -1 || keys[j].indexOf('agrivision-offline') !== -1) {
+                caches.delete(keys[j]).catch(function() {});
+              }
+            }
+          }).catch(function() {});
+        }
+
+        // Handle Vite HMR WebSocket in preview environment where HMR is disabled
+        var RealWebSocket = window.WebSocket;
+        if (RealWebSocket) {
+          window.WebSocket = function(url, protocols) {
+            var isViteHmr = protocols === 'vite-hmr' ||
+              (typeof protocols === 'string' && protocols.indexOf('vite') !== -1) ||
+              (Array.isArray(protocols) && protocols.indexOf('vite-hmr') !== -1) ||
+              (typeof url === 'string' && (url.indexOf('token=') !== -1 || url.indexOf('24678') !== -1));
+
+            if (isViteHmr) {
+              var target = new EventTarget();
+              var dummyWs = {
+                url: url,
+                readyState: 1,
+                send: function() {},
+                close: function() { dummyWs.readyState = 3; },
+                addEventListener: function(type, fn, opts) {
+                  target.addEventListener(type, fn, opts);
+                  if (type === 'open') {
+                    setTimeout(function() {
+                      var ev = new Event('open');
+                      target.dispatchEvent(ev);
+                      if (dummyWs.onopen) dummyWs.onopen(ev);
+                    }, 0);
+                  }
+                },
+                removeEventListener: function(type, fn, opts) {
+                  target.removeEventListener(type, fn, opts);
+                },
+                dispatchEvent: function(ev) { return target.dispatchEvent(ev); },
+                onopen: null,
+                onmessage: null,
+                onerror: null,
+                onclose: null
+              };
+              setTimeout(function() {
+                var ev = new Event('open');
+                target.dispatchEvent(ev);
+                if (dummyWs.onopen) dummyWs.onopen(ev);
+              }, 0);
+              return dummyWs;
+            }
+            return new RealWebSocket(url, protocols);
+          };
+          window.WebSocket.prototype = RealWebSocket.prototype;
+          window.WebSocket.CONNECTING = 0;
+          window.WebSocket.OPEN = 1;
+          window.WebSocket.CLOSING = 2;
+          window.WebSocket.CLOSED = 3;
+        }
+
+        // Global uncaught error filter for Vite dev HMR WebSocket
+        window.addEventListener('error', function(event) {
+          var msg = event && (event.message || '');
+          var file = event && (event.filename || '');
+          if (
+            msg.indexOf('WebSocket') !== -1 ||
+            msg.indexOf('vite') !== -1 ||
+            msg.indexOf('HMR') !== -1 ||
+            file.indexOf('@vite/client') !== -1
+          ) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+
+        // Global unhandled promise rejection filter for Vite dev HMR WebSocket
+        window.addEventListener('unhandledrejection', function(event) {
+          var reason = event && event.reason;
+          var msg = reason instanceof Error ? reason.message : String(reason || '');
+          if (
+            msg.indexOf('WebSocket') !== -1 ||
+            msg.indexOf('vite') !== -1 ||
+            msg.indexOf('HMR') !== -1
+          ) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+
+        // Filter out [vite] websocket warning / errors from console
+        var origConsoleError = console.error;
+        console.error = function() {
+          var str = '';
+          for (var i = 0; i < arguments.length; i++) {
+            str += String(arguments[i]) + ' ';
+          }
+          if (
+            str.indexOf('WebSocket') !== -1 ||
+            str.indexOf('[vite]') !== -1 ||
+            str.indexOf('vite:ws') !== -1
+          ) {
+            return;
+          }
+          return origConsoleError.apply(console, arguments);
+        };
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <title>AgriVision — AI-Powered Crop Disease Diagnostics</title>
+    <meta name="description" content="AI-Powered Crop Disease Diagnostics for 18 staple and horticultural crops and 60 classes (42 disease and 18 healthy conditions) with multi-database grounding (PlantDoc, PlantVillage, ICAR, CABI, EPPO) and on-device offline inference." />
+    <meta property="og:title" content="AgriVision — AI-Powered Crop Disease Diagnostics" />
+    <meta property="og:description" content="AI-Powered Crop Disease Diagnostics for 18 staple and horticultural crops and 60 classes (42 disease and 18 healthy conditions) with multi-database grounding (PlantDoc, PlantVillage, ICAR, CABI, EPPO) and on-device offline inference." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#15803d" />
+    <meta name="color-scheme" content="light" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AgriVision" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F6F8F5] text-slate-900 antialiased selection:bg-emerald-200 selection:text-emerald-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

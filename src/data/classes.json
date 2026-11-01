@@ -1,0 +1,482 @@
+[
+  {
+    "id": 0,
+    "className": "Apple___Apple_scab",
+    "crop": "Apple",
+    "cropId": "apple",
+    "disease": "Apple Scab",
+    "isHealthy": false
+  },
+  {
+    "id": 1,
+    "className": "Apple___Black_rot",
+    "crop": "Apple",
+    "cropId": "apple",
+    "disease": "Black Rot",
+    "isHealthy": false
+  },
+  {
+    "id": 2,
+    "className": "Apple___Cedar_apple_rust",
+    "crop": "Apple",
+    "cropId": "apple",
+    "disease": "Cedar Apple Rust",
+    "isHealthy": false
+  },
+  {
+    "id": 3,
+    "className": "Apple___healthy",
+    "crop": "Apple",
+    "cropId": "apple",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 4,
+    "className": "Blueberry___healthy",
+    "crop": "Blueberry",
+    "cropId": "blueberry",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 5,
+    "className": "Cherry_(including_sour)___Powdery_mildew",
+    "crop": "Cherry",
+    "cropId": "cherry",
+    "disease": "Powdery Mildew",
+    "isHealthy": false
+  },
+  {
+    "id": 6,
+    "className": "Cherry_(including_sour)___healthy",
+    "crop": "Cherry",
+    "cropId": "cherry",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 7,
+    "className": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+    "crop": "Corn / Maize",
+    "cropId": "corn",
+    "disease": "Cercospora Gray Leaf Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 8,
+    "className": "Corn_(maize)___Common_rust",
+    "crop": "Corn / Maize",
+    "cropId": "corn",
+    "disease": "Common Rust",
+    "isHealthy": false
+  },
+  {
+    "id": 9,
+    "className": "Corn_(maize)___Northern_Leaf_Blight",
+    "crop": "Corn / Maize",
+    "cropId": "corn",
+    "disease": "Northern Leaf Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 10,
+    "className": "Corn_(maize)___healthy",
+    "crop": "Corn / Maize",
+    "cropId": "corn",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 11,
+    "className": "Grape___Black_rot",
+    "crop": "Grape",
+    "cropId": "grape",
+    "disease": "Black Rot",
+    "isHealthy": false
+  },
+  {
+    "id": 12,
+    "className": "Grape___Esca_(Black_Measles)",
+    "crop": "Grape",
+    "cropId": "grape",
+    "disease": "Esca (Black Measles)",
+    "isHealthy": false
+  },
+  {
+    "id": 13,
+    "className": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+    "crop": "Grape",
+    "cropId": "grape",
+    "disease": "Leaf Blight (Isariopsis)",
+    "isHealthy": false
+  },
+  {
+    "id": 14,
+    "className": "Grape___healthy",
+    "crop": "Grape",
+    "cropId": "grape",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 15,
+    "className": "Orange___Haunglongbing_(Citrus_greening)",
+    "crop": "Orange",
+    "cropId": "orange",
+    "disease": "Huanglongbing (Citrus Greening)",
+    "isHealthy": false
+  },
+  {
+    "id": 16,
+    "className": "Peach___Bacterial_spot",
+    "crop": "Peach",
+    "cropId": "peach",
+    "disease": "Bacterial Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 17,
+    "className": "Peach___healthy",
+    "crop": "Peach",
+    "cropId": "peach",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 18,
+    "className": "Pepper,_bell___Bacterial_spot",
+    "crop": "Bell Pepper",
+    "cropId": "pepper",
+    "disease": "Bacterial Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 19,
+    "className": "Pepper,_bell___healthy",
+    "crop": "Bell Pepper",
+    "cropId": "pepper",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 20,
+    "className": "Potato___Early_blight",
+    "crop": "Potato",
+    "cropId": "potato",
+    "disease": "Early Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 21,
+    "className": "Potato___Late_blight",
+    "crop": "Potato",
+    "cropId": "potato",
+    "disease": "Late Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 22,
+    "className": "Potato___healthy",
+    "crop": "Potato",
+    "cropId": "potato",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 23,
+    "className": "Raspberry___healthy",
+    "crop": "Raspberry",
+    "cropId": "raspberry",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 24,
+    "className": "Soybean___healthy",
+    "crop": "Soybean",
+    "cropId": "soybean",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 25,
+    "className": "Squash___Powdery_mildew",
+    "crop": "Squash",
+    "cropId": "squash",
+    "disease": "Powdery Mildew",
+    "isHealthy": false
+  },
+  {
+    "id": 26,
+    "className": "Strawberry___Leaf_scorch",
+    "crop": "Strawberry",
+    "cropId": "strawberry",
+    "disease": "Leaf Scorch",
+    "isHealthy": false
+  },
+  {
+    "id": 27,
+    "className": "Strawberry___healthy",
+    "crop": "Strawberry",
+    "cropId": "strawberry",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 28,
+    "className": "Tomato___Bacterial_spot",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Bacterial Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 29,
+    "className": "Tomato___Early_blight",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Early Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 30,
+    "className": "Tomato___Late_blight",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Late Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 31,
+    "className": "Tomato___Leaf_Mold",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Leaf Mold",
+    "isHealthy": false
+  },
+  {
+    "id": 32,
+    "className": "Tomato___Septoria_leaf_spot",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Septoria Leaf Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 33,
+    "className": "Tomato___Spider_mites Two-spotted_spider_mite",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Spider Mites (Two-Spotted)",
+    "isHealthy": false
+  },
+  {
+    "id": 34,
+    "className": "Tomato___Target_Spot",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Target Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 35,
+    "className": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Yellow Leaf Curl Virus",
+    "isHealthy": false
+  },
+  {
+    "id": 36,
+    "className": "Tomato___Tomato_mosaic_virus",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Mosaic Virus",
+    "isHealthy": false
+  },
+  {
+    "id": 37,
+    "className": "Tomato___healthy",
+    "crop": "Tomato",
+    "cropId": "tomato",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 38,
+    "className": "Rice___Bacterial_leaf_blight",
+    "crop": "Rice (Paddy)",
+    "cropId": "rice",
+    "disease": "Bacterial Leaf Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 39,
+    "className": "Rice___Brown_spot",
+    "crop": "Rice (Paddy)",
+    "cropId": "rice",
+    "disease": "Brown Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 40,
+    "className": "Rice___Leaf_Blast",
+    "crop": "Rice (Paddy)",
+    "cropId": "rice",
+    "disease": "Leaf Blast",
+    "isHealthy": false
+  },
+  {
+    "id": 41,
+    "className": "Rice___healthy",
+    "crop": "Rice (Paddy)",
+    "cropId": "rice",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 42,
+    "className": "Wheat___Brown_rust",
+    "crop": "Wheat",
+    "cropId": "wheat",
+    "disease": "Brown Rust (Leaf Rust)",
+    "isHealthy": false
+  },
+  {
+    "id": 43,
+    "className": "Wheat___Yellow_rust",
+    "crop": "Wheat",
+    "cropId": "wheat",
+    "disease": "Yellow Rust (Stripe Rust)",
+    "isHealthy": false
+  },
+  {
+    "id": 44,
+    "className": "Wheat___Powdery_mildew",
+    "crop": "Wheat",
+    "cropId": "wheat",
+    "disease": "Powdery Mildew",
+    "isHealthy": false
+  },
+  {
+    "id": 45,
+    "className": "Wheat___healthy",
+    "crop": "Wheat",
+    "cropId": "wheat",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 46,
+    "className": "Cotton___Bacterial_blight",
+    "crop": "Cotton",
+    "cropId": "cotton",
+    "disease": "Bacterial Blight (Angular Leaf Spot)",
+    "isHealthy": false
+  },
+  {
+    "id": 47,
+    "className": "Cotton___Leaf_curl_virus",
+    "crop": "Cotton",
+    "cropId": "cotton",
+    "disease": "Leaf Curl Virus (CLCuV)",
+    "isHealthy": false
+  },
+  {
+    "id": 48,
+    "className": "Cotton___healthy",
+    "crop": "Cotton",
+    "cropId": "cotton",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 49,
+    "className": "Sugarcane___Red_rot",
+    "crop": "Sugarcane",
+    "cropId": "sugarcane",
+    "disease": "Red Rot",
+    "isHealthy": false
+  },
+  {
+    "id": 50,
+    "className": "Sugarcane___Smut",
+    "crop": "Sugarcane",
+    "cropId": "sugarcane",
+    "disease": "Sugarcane Smut",
+    "isHealthy": false
+  },
+  {
+    "id": 51,
+    "className": "Sugarcane___healthy",
+    "crop": "Sugarcane",
+    "cropId": "sugarcane",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 52,
+    "className": "Soybean___Rust",
+    "crop": "Soybean",
+    "cropId": "soybean",
+    "disease": "Soybean Rust",
+    "isHealthy": false
+  },
+  {
+    "id": 53,
+    "className": "Soybean___Cercospora_leaf_spot",
+    "crop": "Soybean",
+    "cropId": "soybean",
+    "disease": "Cercospora Leaf Spot",
+    "isHealthy": false
+  },
+  {
+    "id": 54,
+    "className": "Blueberry___Anthracnose",
+    "crop": "Blueberry",
+    "cropId": "blueberry",
+    "disease": "Anthracnose Ripe Rot",
+    "isHealthy": false
+  },
+  {
+    "id": 55,
+    "className": "Blueberry___Stem_blight",
+    "crop": "Blueberry",
+    "cropId": "blueberry",
+    "disease": "Botryosphaeria Stem Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 56,
+    "className": "Raspberry___Cane_blight",
+    "crop": "Raspberry",
+    "cropId": "raspberry",
+    "disease": "Cane Blight",
+    "isHealthy": false
+  },
+  {
+    "id": 57,
+    "className": "Raspberry___Yellow_rust",
+    "crop": "Raspberry",
+    "cropId": "raspberry",
+    "disease": "Late Leaf Rust (Yellow Rust)",
+    "isHealthy": false
+  },
+  {
+    "id": 58,
+    "className": "Orange___healthy",
+    "crop": "Orange",
+    "cropId": "orange",
+    "disease": "Healthy",
+    "isHealthy": true
+  },
+  {
+    "id": 59,
+    "className": "Squash___healthy",
+    "crop": "Squash",
+    "cropId": "squash",
+    "disease": "Healthy",
+    "isHealthy": true
+  }
+]
